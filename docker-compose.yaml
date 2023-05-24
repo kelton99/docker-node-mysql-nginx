@@ -20,6 +20,7 @@ services:
   app:
     build:
       context: node
+    image: keltonfreitas/app
     networks:
       - node-network
     command: sh -c "npm install && node index.js"
@@ -35,6 +36,7 @@ services:
   nginx:
     build:
       context: nginx
+    image: keltonfreitas/nginx
     container_name: nginx
     networks:
       - node-network
