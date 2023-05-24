@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
     const connection = mysql.createConnection(config)
     const selectQuery = `SELECT * FROM people`;
-    let htmlReturn = '<h1>Header Text</h1>\n<ul>';
+    let htmlReturn = '<h1>Full Cycle Rocks!</h1>\n<ul>';
 
     connection.query(selectQuery, (error, results, fields) => {
         results.forEach(person => {
