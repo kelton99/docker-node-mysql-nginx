@@ -21,6 +21,7 @@ services:
     build:
       context: node
     image: keltonfreitas/app
+    entrypoint: dockerize -wait tcp://db:3306 -timeout 10s docker-entrypoint.sh
     networks:
       - node-network
     command: sh -c "npm install && node index.js"
